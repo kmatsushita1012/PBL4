@@ -1,17 +1,21 @@
 from input import input
+from pbl_mail import mail
+from reco_init import reco_init
+from mktable import mktable
 
 def main():
+    time = True
+    
+    info = input()
+    
+    coordinate = reco_init(info["num"]) 
 
-    info = Input()
-
-    coordinate = Face_recognition(info["num"]) 
-
-    Area_definition(coordinate, info)
+    mktable(coordinate, info)
 
     while():
         judge = Cheating_judgement()
         if(judge == False):
             suspect = Coordinate_judgement(judge)
-            Notification(suspect)
+            mail(suspect)
         if(time == False):
             break
