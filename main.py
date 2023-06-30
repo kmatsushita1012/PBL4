@@ -1,3 +1,5 @@
+from input import input
+
 def main():
 
     info = Input()
