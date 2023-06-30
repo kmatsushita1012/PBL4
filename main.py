@@ -2,6 +2,8 @@ from input import input
 from pbl_mail import mail
 from reco_init import reco_init
 from mktable import mktable
+from coor_check import coor_check
+from cheating import cheating
 
 def main():
     time = True
@@ -13,9 +15,9 @@ def main():
     mktable(coordinate, info)
 
     while():
-        judge = Cheating_judgement()
+        judge = cheating()
         if(judge == False):
-            suspect = Coordinate_judgement(judge)
-            mail(suspect)
+            suspect = coor_check(judge)
+            mail(info["address"],suspect,info["class"])
         if(time == False):
             break
