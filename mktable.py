@@ -1,20 +1,5 @@
 import json
 import random
-info = {
-    # 座席表
-    "table": [
-        ["A", "B", "C"],
-        ["D", "E", "F"],
-        ["G", "H", "I"]
-    ],
-    # その他情報
-    "class": "1-1",
-    "num": 30
-
-}
-coordinates = [(1.0, 1.0), (2.1, 0.9), (2.9, 1.1), (1.1, 2.1),
-               (2.0, 1.9), (3.1, 2.0), (0.9, 2.9), (1.9, 3.0), (3.0, 3.1)]
-
 
 def mktable(coordinates0, info):
     xlen = len(info["table"][0])
@@ -36,5 +21,3 @@ def mktable(coordinates0, info):
     print(table)
     print(json.dumps(table))
 
-
-mktable(coordinates, info)

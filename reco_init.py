@@ -81,10 +81,6 @@ def reco_init(num):
             yaw = eulerAngles[1]
             pitch = eulerAngles[0]
             roll = eulerAngles[2]
-
-            print("yaw", int(yaw), "pitch", int(pitch),
-                "roll", int(roll))  # 頭部姿勢データの取り出し
-
             cv2.putText(frame, 'yaw : ' + str(int(yaw)), (20, 10),
                         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
             cv2.putText(frame, 'pitch : ' + str(int(pitch)), (20, 25),
@@ -110,6 +106,7 @@ def reco_init(num):
         cv2.imshow('frame', frame)  # 画像を表示する
         if cv2.waitKey(1) & 0xFF == ord('q'):  # qを押すとbreakしてwhileから抜ける
             break
+        print(f"init={num},now={len(rects)}")
         if len(rects)==num:
             capture.release()  # video captureを終了する
             cv2.destroyAllWindows()  # windowを閉じる

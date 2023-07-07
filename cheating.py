@@ -5,7 +5,7 @@ from imutils import face_utils
 import numpy as np
 
 def cheating():
-
+    print("cheat")
     # VideoCapture オブジェクトを取得します
     DEVICE_ID = 0 #ID 0は標準web cam
     capture = cv2.VideoCapture(DEVICE_ID)#dlibの学習済みデータの読み込み
@@ -89,7 +89,8 @@ def cheating():
             else:
                 count=0
 
-            print("yaw",int(yaw),"pitch",int(pitch),"roll",int(roll))#頭部姿勢データの取り出し
+            #print("yaw",int(yaw),"pitch",int(pitch),"roll",int(roll))
+            # #頭部姿勢データの取り出し
 
             if count==5:
                 print("cheating")

@@ -9,15 +9,18 @@ def main():
     time = True
     
     info = input()
-    
+    print("a")
     coordinate = reco_init(info["num"]) 
 
     mktable(coordinate, info)
-
-    while():
+    print("16")
+    while(1):
         judge = cheating()
         if(judge == False):
+
             suspect = coor_check(judge)
             mail(info["address"],suspect,info["class"])
         if(time == False):
             break
+if __name__ == "__main__":
+	main()
